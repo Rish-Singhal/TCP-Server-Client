@@ -8,15 +8,15 @@
             directory contain: file1.txt, file2.txt, file3.txt . 
 
 ## Working
-            >Client
-                >> listall // client asked for the list of files in server’s directory . 
-                >file1.txt // response [list of files] sent by server . 
-                >file2.txt . 
-                >file3.txt . 
-                >>> send file2.txt // client downloaded file2.txt in its own directory . 
-                >>> send file3.txt // client downloaded file2.txt in its own directory . 
-                >Error handling such as requesting missing files must be handled.  
-                >Multiple clients are possible.  
+            Client
+            >> listall // client asked for the list of files in server’s directory . 
+            file1.txt // response [list of files] sent by server . 
+            file2.txt . 
+            file3.txt . 
+            >> send file2.txt // client downloaded file2.txt in its own directory . 
+            >> send file3.txt // client downloaded file2.txt in its own directory . 
+            Error handling such as requesting missing files must be handled.  
+            Multiple clients are possible.  
 
 ## Implementation
      1. Using Sockets
